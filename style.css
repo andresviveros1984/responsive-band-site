@@ -1,0 +1,360 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+.mobile, #mobile{
+  display: none;
+}
+header a, header button{
+  text-decoration: none;
+  margin: 0 15px;
+  color: white;
+  padding: 17px;
+}
+
+
+
+nav button{
+  background-color: transparent;
+  border: none;
+  position: relative;
+
+}
+
+nav button::after{ 
+  content: "\f0d7";
+  font-family: "Font Awesome 5 free";
+  font-weight: 900;
+  position: absolute;
+  -webkit-font-smoothing: antialiased;
+}
+
+header{
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  box-sizing: border-box;
+}
+
+
+nav a:hover,nav button:hover{
+  background-color: grey;
+}
+
+.search{
+  color: white;
+  padding: 15px;
+}
+
+.search:hover{
+  background-color:red;
+}
+
+.dropdown{
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color:white;
+}
+.dropdown a{
+  color: black;
+}
+
+.more{
+  display: inline-block;
+}
+
+.more button, .more a{
+  margin: 0;
+}
+
+/* 
+.search {
+  color: white;
+  display: inline;
+  padding: 15px;
+}
+search:hover {
+  background-color:red;
+} */
+.slide{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 60vw;
+  background-image: url(./images/image1.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 5vw;
+}
+
+.band-info{
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.image-information{
+  height: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+
+.images{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+
+
+.images img{
+  width: 160px;
+  height:180px;
+  border-radius: 5px;
+}
+
+.image{
+  height:230px ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tour-dates{
+  width: 100%;
+  height: 800px;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.tour-months{
+  width: 80vw;
+  background-color: white;
+  color: black;
+}
+.month{
+  border-bottom: 1px solid grey;
+  padding: 5px;
+  width: 95%;
+}
+
+.card-section{
+  width: 700px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card img{
+  height: 180px;
+  width: 220px;
+}
+
+.card{
+  background-color: white;
+  max-width:220px;
+  height:360px ;
+  color: black;
+}
+
+.card button{
+  background-color: black;
+  color: white;
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+}
+
+.card-info{
+  padding: 20px;
+}
+
+.card-info *{
+  margin: 5px;
+}
+
+.card-info p{
+  font-size: 12px;
+}
+
+
+
+
+
+.contact{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact-form{
+  display: flex;
+  justify-content: space-around;
+  width:700px;
+}
+
+.contact-info span{
+  display: flex;
+  margin: 10px;
+  justify-content: baseline;
+}
+
+.contact-info span p,.contact-info span i{
+  padding: 10px;
+}
+
+.contact-form form{
+  width:50%;
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+form input{
+
+  outline: none;
+  padding: 5px;
+  margin: 5px;
+  
+}
+
+
+#submit{
+  float: right;
+  background-color: black;
+  color: white;
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+}
+
+#name,#email{
+  width: 40%;
+
+}
+
+#message{
+  width: 90%;
+}
+
+
+.card img{
+  opacity: 1;
+}
+.card img:hover{
+  opacity: 0.5;
+}
+
+
+
+.last-image{
+  height: 30vw;
+  background-size: cover;
+  background-position: center;
+  background-image: url(./images/footer-foto.png);
+}
+
+footer{
+  text-align: center;
+  margin: 40px;
+  color: grey;
+}
+
+@media only screen and (max-width:750px){
+  nav *{
+    display: block;
+  }
+  header{
+    height: max-content;
+    align-items: flex-start;
+    position: absolute;
+    width: 100vw;
+  }
+  .more{
+    display: none;
+  }
+  .mobile,#mobile{
+    display:block ;
+  }
+  #desktop{
+    display: none;
+  }
+  .mob{
+    display: none;
+  }
+  .band-info{
+    height: max-content;
+    padding: 20px;
+  }
+
+  .images {
+    flex-direction: column;
+    align-items: center;
+    
+  } 
+  .image{
+    margin: 5vw;
+    height: 60vw;
+  }
+  .image img{
+    width: 50vw;
+    height: 60vw;
+  }
+
+  .tour-dates{
+    height: max-content;
+  }
+  .tour-months{
+    width: 90vw;
+  }
+
+  .card-section{
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    padding: 5vw;
+    margin: 10px;
+  }
+  
+  .contact-form{
+    flex-direction:column ;
+    align-items: center;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
